@@ -1,10 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Home</title>
-</head>
+{% extends "myheader.html" %}
+{% block title %}
+Index
+{% endblock %}
+
+
+
 <body>
+{% block content %}
+
 <div class="container">
    <center>
         <h1>Welcome to GITC First Git Repo on Flask Project</h1>
@@ -21,7 +24,7 @@
 
         <div class="form-group">
             <label>Email Address:</label>
-            <input name="fname" type="email" placeholder="Full Name">
+            <input type="email"  name="memail" placeholder="Full Name">
         </div>
 
         <div class="form-group">
@@ -39,6 +42,5 @@
     </form>
 
 </center>
-
+{% endblock %}
 </body>
-</html>

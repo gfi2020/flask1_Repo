@@ -22,12 +22,13 @@ def index():
 def getData():
     if request.method=="POST":
         fname = request.form["fname"]
-        email = request.form["email"]
+        email = request.form["memail"]
         sex = request.form["sex"]
         address = request.form["address"]
         full_details = "Full name:  " + fname + " " + "email: " + email + " " + "sex: " + sex + " address: "+ " "+ address
+        print(full_details)
         return "your Full details are: " + "\n" + full_details
-    return "Get request not allowed"
+    return render_template("index.html")
 
 
 # main driver function
