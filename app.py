@@ -41,6 +41,18 @@ def login():
     return render_template("login.html")
 
 
+
+@app.route("/reg", methods=["POST", "GET"])
+def reg():
+    if request.method=="POST":
+        print("post request")
+        #email = request.form["email"]
+        # password = request.form["password"]
+        # return "login details: " + email + " " + password
+    return render_template("reg.html")
+
+
+
 # main driver function
 if __name__ == '__main__':
 
