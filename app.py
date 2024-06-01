@@ -31,6 +31,16 @@ def getData():
     return render_template("index.html")
 
 
+
+@app.route('/login', methods=["POST", "GET"])
+def login():
+    if request.method=="POST":
+        email = request.form["email"]
+        password = request.form["password"]
+        return "login details: " + email + " " + password
+    return render_template("login.html")
+
+
 # main driver function
 if __name__ == '__main__':
 
